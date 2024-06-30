@@ -87,29 +87,29 @@ def classify_and_recommend(new_song_params, num_recommendations=5):
 
     new_song_df = pd.DataFrame([new_song_params])
     new_song_normalized = scaler.transform(new_song_df[features])
-    
+
     cluster_label = kmeans.predict(new_song_normalized)[0]
-    
+
     cluster_songs = songs_df[songs_df['cluster'] == cluster_label]
-    
+
     recommendations = cluster_songs.sample(n=num_recommendations, random_state=1)
-    
+
     new_song_pca = pca.transform(new_song_normalized)
-    
+
     plt.figure(figsize=(10, 7))
     for cluster in range(optimal_clusters):
         clustered_data = pca_df[pca_df['cluster'] == cluster]
         plt.scatter(clustered_data['principal_component_1'], clustered_data['principal_component_2'], label=f'Cluster {cluster}', s=50)
-    
-    plt.scatter(new_song_pca[0, 0], new_song_pca[0, 1], c='red', label='New Song', s=200, marker='X')
+
+    plt.scatter(new_song_pca[0, 0], new_song_pca[0, 1], c='purple', label='New Song', s=200, marker='*')
     plt.title('K-means Clusters (PCA Reduced Data) with New Song Prediction')
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
     plt.legend()
     plt.show()
-    
-    return recommendations[['artist', 'song', 'duration_ms', 'popularity', 'danceability', 'energy', 'key', 
-                            'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness', 
+
+    return cluster_label, recommendations[['artist', 'song', 'duration_ms', 'popularity', 'danceability', 'energy', 'key',
+                            'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness',
                             'liveness', 'valence', 'tempo', 'genre']]
 
 
@@ -151,8 +151,10 @@ new_song_example = {
 # new_song_example = solicitar_datos_cancion()
 
 # <-- mostrar las recomendaciones -->
-recommendations = classify_and_recommend(new_song_example)
-# print(recommendations)
+cluster_label, recommendations = classify_and_recommend(new_song_example)
+print(f'La canción "Comedy" pertenece al cluster: {cluster_label}')
+print("Recomendaciones de canciones:")
+print(recommendations[['artist', 'song']])
 
 recommendations.to_csv('song_recommendations.csv', index=False)
 print("Las recomendaciones se han guardado en 'song_recommendations.csv'")
