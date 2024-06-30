@@ -116,39 +116,39 @@ def classify_and_recommend(new_song_params, num_recommendations=5):
 # <-- solicitar los datos al usuario  -->
 print("Por favor, introduce los siguientes datos para recomendarte una cancion:")
 
-new_song_example = {
-    'popularity': 70,
-    'danceability': 0.75,
-    'energy': 0.8,
-    'key': 5,
-    'loudness': -6.0,
-    'mode': 1,
-    'speechiness': 0.05,
-    'acousticness': 0.1,
-    'instrumentalness': 0.0,
-    'liveness': 0.2,
-    'valence': 0.6,
-    'tempo': 120.0
-}
-# def solicitar_datos_cancion():
-#     print("Por favor, introduce los siguientes datos de la canción:")
-#     new_song_example = {
-#         'popularity': int(input("Popularidad (0-100): ")),
-#         'danceability': float(input("Bailable (0.0-1.0): ")),
-#         'energy': float(input("Energía (0.0-1.0): ")),
-#         'key': int(input("Clave musical (0-11 donde 0 es Do y 11 es Si): ")),
-#         'loudness': float(input("Volumen (dB): ")),
-#         'mode': int(input("Modo (0 = menor, 1 = mayor): ")),
-#         'speechiness': float(input("Habla (0.0-1.0): ")),
-#         'acousticness': float(input("Acústica (0.0-1.0): ")),
-#         'instrumentalness': float(input("Instrumentalidad (0.0-1.0): ")),
-#         'liveness': float(input("Vivacidad (0.0-1.0): ")),
-#         'valence': float(input("Valencia (0.0-1.0): ")),
-#         'tempo': float(input("Tempo (BPM): "))
-#     }
-#     return new_song_example
+# new_song_example = {
+#     'popularity': 70,
+#     'danceability': 0.75,
+#     'energy': 0.8,
+#     'key': 5,
+#     'loudness': -6.0,
+#     'mode': 1,
+#     'speechiness': 0.05,
+#     'acousticness': 0.1,
+#     'instrumentalness': 0.0,
+#     'liveness': 0.2,
+#     'valence': 0.6,
+#     'tempo': 120.0
+# }
+def solicitar_datos_cancion():
+    print("Por favor, introduce los siguientes datos de la canción:")
+    new_song_example = {
+        'popularity': int(input("Popularidad (0-100): ")),
+        'danceability': float(input("Bailable (0.0-1.0): ")),
+        'energy': float(input("Energía (0.0-1.0): ")),
+        'key': int(input("Clave musical (0-11 donde 0 es Do y 11 es Si): ")),
+        'loudness': float(input("Volumen (dB): ")),
+        'mode': int(input("Modo (0 = menor, 1 = mayor): ")),
+        'speechiness': float(input("Habla (0.0-1.0): ")),
+        'acousticness': float(input("Acústica (0.0-1.0): ")),
+        'instrumentalness': float(input("Instrumentalidad (0.0-1.0): ")),
+        'liveness': float(input("Vivacidad (0.0-1.0): ")),
+        'valence': float(input("Valencia (0.0-1.0): ")),
+        'tempo': float(input("Tempo (BPM): "))
+    }
+    return new_song_example
 
-# new_song_example = solicitar_datos_cancion()
+new_song_example = solicitar_datos_cancion()
 
 # <-- mostrar las recomendaciones -->
 cluster_label, recommendations = classify_and_recommend(new_song_example)
