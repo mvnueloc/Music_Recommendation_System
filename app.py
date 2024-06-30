@@ -92,7 +92,8 @@ def classify_and_recommend(new_song_params, num_recommendations=5):
 
     cluster_songs = songs_df[songs_df['cluster'] == cluster_label]
 
-    recommendations = cluster_songs.sample(n=num_recommendations, random_state=1)
+    # Generar recomendaciones aleatorias
+    recommendations = cluster_songs.sample(n=num_recommendations)
 
     new_song_pca = pca.transform(new_song_normalized)
 
@@ -131,7 +132,7 @@ print("Por favor, introduce los siguientes datos para recomendarte una cancion:"
 #     'tempo': 120.0
 # }
 def solicitar_datos_cancion():
-    print("Por favor, introduce los siguientes datos de la canción:")
+    # print("Por favor, introduce los siguientes datos de la canción:")
     new_song_example = {
         'popularity': int(input("Popularidad (0-100): ")),
         'danceability': float(input("Bailable (0.0-1.0): ")),
