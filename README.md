@@ -3,9 +3,9 @@
 
 Music recommendation system based on the analysis and classification of song metadata, such as rhythm, tempo, popularity, and musical key.
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.paeg.uz%2Fposts%2F299-sohaning-muhim-korsatgichlari%2F%3Fu%3Dspotify-api-making-my-first-call-mark-needham-jj-v2Ae7ASN&psig=AOvVaw2bZsY1hrnFTvLnCDqH5g9n&ust=1722371506162000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKiokoOMzYcDFQAAAAAdAAAAABAQ![image](https://github.com/user-attachments/assets/0012740e-4cd4-4885-bbfd-9e4c1b5b5468)
+<img width="998" alt="Spotify for developers" src="[https://github.com/user-attachments/assets/b38b5b79-e631-4247-8159-335fea4e603c](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.paeg.uz%2Fposts%2F299-sohaning-muhim-korsatgichlari%2F%3Fu%3Dspotify-api-making-my-first-call-mark-needham-jj-v2Ae7ASN&psig=AOvVaw2bZsY1hrnFTvLnCDqH5g9n&ust=1722371506162000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKiokoOMzYcDFQAAAAAdAAAAABAQ)![image](https://github.com/user-attachments/assets/31623128-1e04-48f8-b6f7-f76b8a28ac37)
+">
 
-![Uploading image.png…]()
 
 ## Project Summary
 
