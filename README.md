@@ -31,7 +31,7 @@ To recommend songs that match users' tastes, you need to enter the following val
 
 This value is compared to the previous dataset, the algorithm displays the 5 songs with the most similar features, and saves all the details in a JSON file.
 
-<img width="702" alt="Captura de pantalla 2024-07-29 a la(s) 2 29 34 p m" src="https://github.com/user-attachments/assets/35d32ce8-ec3f-47e8-a2e0-798f2f5bbee2">
+<img width="913" alt="Captura de pantalla 2024-07-29 a la(s) 2 29 34 p m" src="https://github.com/user-attachments/assets/35d32ce8-ec3f-47e8-a2e0-798f2f5bbee2">
 
 <img width="913" alt="Captura de pantalla 2024-07-29 a la(s) 2 30 11 p m" src="https://github.com/user-attachments/assets/a1d0058c-db7c-44dc-bf5a-b70fc61e4b78">
 
